@@ -378,6 +378,275 @@
             color: #d63031;
             margin-bottom: 10px;
         }
+        
+        Ecco la media query completa da aggiungere alla fine del tag `<style>` per ottimizzare la visualizzazione mobile:
+
+```css
+/* Media Query per dispositivi mobili */
+@media screen and (max-width: 768px) {
+    /* Container e padding generali */
+    .container {
+        margin: 0;
+        border-radius: 0;
+        box-shadow: none;
+    }
+    
+    .content {
+        padding: 20px 15px;
+    }
+    
+    /* Header */
+    .header {
+        padding: 40px 20px;
+    }
+    
+    h1 {
+        font-size: 2em;
+        line-height: 1.2;
+    }
+    
+    .subtitle {
+        font-size: 1.1em;
+    }
+    
+    /* Sezioni */
+    .section {
+        padding: 20px;
+        margin-bottom: 25px;
+        border-radius: 10px;
+    }
+    
+    h2 {
+        font-size: 1.5em;
+        flex-wrap: wrap;
+    }
+    
+    h2::before {
+        width: 25px;
+        height: 25px;
+        margin-right: 10px;
+    }
+    
+    /* Grid responsive */
+    .info-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .info-item {
+        padding: 15px;
+    }
+    
+    .info-label {
+        font-size: 0.85em;
+    }
+    
+    .info-value {
+        font-size: 1.05em;
+    }
+    
+    /* Route e badge */
+    .route {
+        font-size: 1.1em;
+        padding: 0 10px;
+        line-height: 1.4;
+    }
+    
+    .route-info {
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px;
+        text-align: center;
+    }
+    
+    .route-info span {
+        display: block;
+        margin: 5px 0;
+    }
+    
+    /* Itinerari */
+    .itinerary-day {
+        padding: 20px 15px;
+        margin-bottom: 15px;
+    }
+    
+    .day-header {
+        font-size: 1.1em;
+        line-height: 1.4;
+        margin-bottom: 20px;
+    }
+    
+    .badge {
+        display: inline-block;
+        margin-top: 5px;
+        margin-left: 0;
+    }
+    
+    /* Status badges */
+    .status {
+        font-size: 0.8em;
+        padding: 3px 10px;
+        display: inline-block;
+        margin-top: 5px;
+        margin-left: 0;
+    }
+    
+    /* Liste e box informativi */
+    .poi-list, .activity-box, .highlight {
+        padding: 15px;
+        margin: 15px 0;
+    }
+    
+    .poi-list h4, .activity-box h4, .highlight h3 {
+        font-size: 1.1em;
+        margin-bottom: 12px;
+    }
+    
+    .poi-list ul, .activity-box ul {
+        margin-left: 15px;
+        font-size: 0.95em;
+    }
+    
+    .poi-list li, .activity-box li {
+        margin: 8px 0;
+        line-height: 1.5;
+    }
+    
+    /* Warning box */
+    .warning {
+        padding: 15px;
+        font-size: 0.9em;
+        flex-direction: column;
+        text-align: left;
+    }
+    
+    .warning::before {
+        font-size: 1.2em;
+        margin-bottom: 10px;
+    }
+    
+    /* Link booking */
+    .booking-link {
+        display: block;
+        text-align: center;
+        margin: 15px 0;
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+    
+    /* Riepilogo costi */
+    .cost-summary {
+        padding: 20px 15px;
+        margin-top: 15px;
+    }
+    
+    .cost-summary h3 {
+        font-size: 1.2em;
+        margin-bottom: 15px;
+    }
+    
+    .cost-row {
+        flex-direction: row;
+        padding: 12px 0;
+        font-size: 0.95em;
+    }
+    
+    .cost-row span:first-child {
+        flex: 1;
+        margin-right: 10px;
+    }
+    
+    .cost-row:last-child {
+        font-size: 1.1em;
+        margin-top: 10px;
+        padding-top: 12px;
+    }
+    
+    /* Divisione costi highlight */
+    .highlight div[style*="display: flex"] {
+        font-size: 1em !important;
+    }
+    
+    .highlight span[style*="font-size: 1.3em"] {
+        font-size: 1.1em !important;
+    }
+    
+    /* Footer */
+    .footer {
+        padding: 20px 15px;
+        font-size: 0.85em;
+    }
+    
+    /* Tabelle e griglie nelle note */
+    .poi-list div[style*="grid-template-columns"] {
+        display: block !important;
+    }
+    
+    .poi-list div[style*="grid-template-columns"] > div {
+        margin-bottom: 20px;
+    }
+    
+    /* Paragrafi e margini */
+    p {
+        font-size: 0.95em;
+        line-height: 1.5;
+    }
+    
+    ul {
+        font-size: 0.95em;
+    }
+    
+    /* Spacing generale */
+    .section > *:not(:last-child) {
+        margin-bottom: 15px;
+    }
+    
+    /* Hide decorative elements on mobile */
+    .itinerary-day::before {
+        display: none;
+    }
+    
+    /* Ottimizzazione per schermi molto piccoli */
+    @media screen and (max-width: 375px) {
+        h1 {
+            font-size: 1.75em;
+        }
+        
+        h2 {
+            font-size: 1.3em;
+        }
+        
+        .content {
+            padding: 15px 10px;
+        }
+        
+        .section {
+            padding: 15px;
+        }
+        
+        .info-item {
+            padding: 12px;
+        }
+    }
+}
+
+/* Miglioramenti per tablet portrait */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        max-width: 100%;
+        margin: 0;
+    }
+    
+    .info-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .content {
+        padding: 30px;
+    }
+}
+
+        
     </style>
 </head>
 
